@@ -1,0 +1,48 @@
+@import url('fonts.import.less');
+@import url('colors.import.less');
+
+#login-view {
+
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-size: 3em;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  input {
+    height: 40px;
+    border: 0;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1.4em;
+    padding: 5px;
+  }
+
+  input[type=submit] {
+    background: @red;
+    color: white;
+    height: 50px;
+    width: 310px;
+  }
+
+  input[type=submit]:hover {
+    background: darken(@red, 10%);
+  }
+
+  .other-links {
+
+    margin-top: 40px;
+
+    a {
+      color: white;
+      margin: 0 20px;
+    }
+  }
+}

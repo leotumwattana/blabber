@@ -1,0 +1,93 @@
+@import url('colors.import.less');
+
+@meBackground: lighten(@red, 5%);
+@otherBackground: darken(@red, 5%);
+@ruleColor: fade(@lightRed, 50%);
+
+#messages {
+  padding: 20px;
+}
+
+.message {
+  background: @otherBackground;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  float: left;
+  position: relative;
+
+  .columns {
+    padding: 0;
+  }
+
+  &.me {
+    float: right;
+    background: @meBackground;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      right: -20px;
+      bottom: 0;
+      border-top: 15px solid transparent;
+      border-left: 10px solid @meBackground;
+    }
+  }
+
+  &:not(.me) {
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      left: -20px;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      border-top: 15px solid transparent;
+      border-right: 10px solid @otherBackground;
+    }
+  }
+
+  .user {
+    font-size: 0.6em;
+    font-weight: 500;
+    border-bottom: 1px solid @ruleColor;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  .content {
+    line-height: 1.4em;
+  }
+}
+
+#chat-box {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: darken(@teal, 10%);
+  padding: 10px;
+
+  form {
+    margin: 0;
+  }
+
+  input {
+    width: 80%;
+    display: inline;
+    border: 0;
+    height: 45px;
+    margin: 0;
+  }
+
+  input[type=submit] {
+    width: 17%;
+    border: 0;
+    background: @red;
+    color: @lightRed;
+    margin-left: 3px;
+  }
+}

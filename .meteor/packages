@@ -10,3 +10,6 @@ coffeescript
 less
 accounts-base
 accounts-password
+iron-router
+foundation
+font-awesome-4-less

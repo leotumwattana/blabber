@@ -7,3 +7,6 @@ Template.navbar.events
 
   'click #reset': (e) ->
     Meteor.call('clearBlabs')
+
+Template.navbar.helpers
+  title: -> 'Blabber 2'

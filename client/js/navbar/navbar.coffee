@@ -9,4 +9,4 @@ Template.navbar.events
     Meteor.call('clearBlabs')
 
 Template.navbar.helpers
-  title: -> 'Blabber 2'
+  title: -> Session.get('nickname')
